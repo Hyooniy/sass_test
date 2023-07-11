@@ -1,0 +1,100 @@
+/* aside */
+#footer{
+    background-color: #252525;
+}
+aside{
+    width: 95%;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14px;   
+    color: #F7F5E8;
+}
+aside>dl{
+    width: 20%;
+}
+aside>dl:first-child{
+    width: 700px;
+    padding-right: 20px;
+}
+aside>dl:first-child>dt>span{
+    width: 700px
+}
+aside>dl:first-child>dd>form{
+    line-height: 40px;
+}
+
+aside>dl:first-child>dd>form ul>li>p{
+    border: 1px solid #F7F5E8;
+}
+aside>dl:first-child>dd>form ul>li:last-child>label>input{
+    margin-top: 15px;
+    width: 658px;
+    line-height: 35px;
+    border: 1px solid #F7F5E8;
+    background-color: #252525;
+}
+aside>dl:first-child>dd>form ul>li:last-child>label{
+    display: block;
+}
+aside>dl:first-child>dd>form ul>li:last-child>label>button{
+    width: 35px; height: 40px;
+    border: 1px solid #F7F5E8;
+    background-color: #252525;
+    padding-bottom: 9px;
+    border-left: none;
+    position: relative;
+}
+aside>dl:first-child>dd>form ul>li:last-child>label>button>i{
+    margin-left: 5px;
+    margin-bottom: 5px;
+    position: absolute;
+    color: #F7F5E8;
+    display: block;
+}
+aside>dl:nth-child(5){
+    width: 700px;
+    padding-right: 20px;
+}
+aside>dl:nth-child(5)>dt>span{
+    width: 700px;
+}
+aside>dl:nth-child(5)>dd>a{
+    border-bottom: 1px solid #F7F5E8;
+}
+aside>dl:last-child>dd{
+    width: 300px;
+    line-height: 25px;
+}
+aside>dl>dt{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    color: #F7F5E8;
+}
+aside>dl>dd>a{
+    font-size: 12px;
+    color: #F7F5E8;
+}
+aside>dl>dt>span{
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F7F5E8;
+    display: inline-block;
+    width: 300px;
+}
+aside>dl>dd{
+    margin-bottom: 15px;
+}
+footer{
+    padding: 25px 0;
+    position: relative;
+    border-top: 3px solid #F7F5E8;
+}
+footer>small{
+    font-size: 16px;
+    color: #F7F5E8;
+    padding-left: 40px;
+}

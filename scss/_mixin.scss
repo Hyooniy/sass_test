@@ -1,0 +1,23 @@
+@use './variable' as *;
+
+@mixin width{
+    width: 1172px;
+    margin: 0 auto;
+}
+@mixin layout($start: space-between,$direction:row, $vertivcal:center,$wrap: nowrap){
+    display: flex;
+    justify-content: $start;
+    flex-direction: $direction;
+    align-items:$vertivcal;
+    flex-wrap: $wrap;
+}
+@mixin margin($bottom:0){
+    margin: 0 auto;
+    margin-bottom: $bottom;
+}
+@mixin center{
+    text-align: center;
+}
+@mixin border($width:#e8e8e8){
+    border: 1px solid $width;
+}

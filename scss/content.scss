@@ -1,0 +1,121 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+article{
+    div{
+        @include width;
+        width: $content;
+        padding: 98px 0;
+        h3{
+            color: $black;
+            font-size: $large;
+            @include center;
+            padding-bottom: 82px;
+        }
+        .btn{
+            padding-bottom: $large;
+            @include layout;
+            position: relative;
+            .left{
+                font-size: $small;
+                color: $color;
+            }
+            .right{
+                @include layout($start:center);
+                @include border($width:$color);
+                width: 195px;
+                color: $color;
+                font-size: $small;
+                border-radius: $basic * 2;
+                padding: $small 0;
+                i{
+                    width: $small;
+                    padding-left: 5px;
+                }
+            }
+            ul{
+                width: 195px;
+                position: absolute;
+                top: 38px; right: 0;
+                @include border($width:$color);
+                border-bottom: none;
+                background-color: $white;
+                z-index: 100;
+                display: none;
+                li{
+                    @include border($width:$color);
+                    line-height: 25px;
+                    @include center;
+                    font-size: $small;
+                    color: $color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .gallery{
+        @include layout($wrap:wrap);
+        figure{
+            width: 270px;
+            padding-bottom: $basic * 3;
+            position: relative;
+            img{
+                padding-bottom: $basic * 3;
+            }
+            figcaption{
+                dl{
+                    font-size: $font-middle;
+                    @include center;
+                    dt{
+                        padding-bottom: $basic;
+                        font-weight: bold;
+                        color: $black;
+                    }
+                    dd:nth-child(2){
+                        padding-bottom: $basic * 2;
+                        ins{
+                            margin: 0 $basic;
+                            color: $red;
+                        }
+                        del{
+                            margin: 0 $basic;
+                            color: $color;
+                        }
+                    }
+                    dd:nth-child(3){
+                        @include layout;
+                        button{
+                            @include layout($start:center);
+                            background-color: $white;
+                            @include border($width:$color);
+                        
+                        &:first-child{
+                            width: 133px;
+                            height: 37px;
+                            color: #000;
+                            border-radius: 18px;
+                        }
+                        &:last-child{
+                            width: 37px;
+                            height: 37px;
+                            border-radius: 50%;
+                            }
+                        }
+                    }
+                    dd:nth-child(4){
+                        position: absolute;
+                        right: 0; bottom: 200px;
+                        b{
+                            display: block;
+                            width: 50px; height: 50px;
+                            background-color: $red;
+                            border-radius: 50%;
+                            color: $white;
+                            @include layout($start:center);
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}

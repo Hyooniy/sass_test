@@ -1,0 +1,17 @@
+.hide{
+    width: 0; height: 0;
+    font-size: 0; line-height: 0;
+    position: absolute;
+    visibility: hidden;
+}
+/* 
+색상 : 
+진한회색: #252525
+회색 #333333 
+밝은회색 #888
+box01 : #F7F5E8
+box02: #fffef2
+
+
+
+*/

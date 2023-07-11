@@ -1,0 +1,59 @@
+@use './variable' as *;
+@use './mixin' as *;
+
+#footer{
+    padding: 70px 0 50px;
+    background-color: $back;
+}
+    aside{
+    width: $content;
+    @include margin($bottom:60px);
+    @include layout($wrap:wrap,$start:flex-start,$vertivcal:flex-start);
+    font-size: $small;
+    dl{
+        width: 25%;
+        dt{ 
+            font-size: $font-middle;
+            font-weight: bold;
+            margin-bottom: $large;
+            color: $dark;
+            span{
+                font-weight: bold;
+                padding-bottom: $basic;
+                border-bottom: 1px solid $black;
+                display: inline-block;
+                width: 100px;
+            }
+        }
+        dd{
+            margin-bottom: $font-middle;
+        a{
+            font-size: $small;
+            color: $color;
+        }
+        }        
+        &:nth-child(1)>dd>address{
+            font-size:normal;
+            font-weight: bold;
+            width: 247px;
+            font-size: $font-middle;
+            line-height: 25px;
+        }
+        
+    }
+    }
+
+    footer{
+        @include width;
+        @include layout($direction:row-reverse);
+        ul{
+            @include layout;
+            li{
+                margin-left: $basic;
+            }
+        }
+        small{
+            font-size: $font-middle;
+            color: $color;
+        }
+    }
