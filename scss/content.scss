@@ -1,121 +1,268 @@
 @use './variable' as *;
 @use './mixin' as *;
 
-article{
-    div{
-        @include width;
-        width: $content;
-        padding: 98px 0;
-        h3{
-            color: $black;
-            font-size: $large;
-            @include center;
-            padding-bottom: 82px;
-        }
-        .btn{
-            padding-bottom: $large;
-            @include layout;
-            position: relative;
-            .left{
-                font-size: $small;
-                color: $color;
-            }
-            .right{
-                @include layout($start:center);
-                @include border($width:$color);
-                width: 195px;
-                color: $color;
-                font-size: $small;
-                border-radius: $basic * 2;
-                padding: $small 0;
-                i{
-                    width: $small;
-                    padding-left: 5px;
-                }
-            }
-            ul{
-                width: 195px;
-                position: absolute;
-                top: 38px; right: 0;
-                @include border($width:$color);
-                border-bottom: none;
-                background-color: $white;
-                z-index: 100;
-                display: none;
-                li{
-                    @include border($width:$color);
-                    line-height: 25px;
-                    @include center;
-                    font-size: $small;
-                    color: $color;
-                    cursor: pointer;
-                }
+#wrap{
+    @include width;
+}
+div{
+    dl{
+        dd{
+            font-size: $font-16;
+            padding-bottom: 30px;
+            @include lineheight($lh:25px);
+            &:nth-child(2){
+                font-size: $font-30;
+                @include lineheight($lh:35px);
+    }
+            button{
+                    @include border;
+                    background-color: transparent;
+                    padding: $font-20;
+                    font-weight: bold;
+                    &:hover{
+                        background-color: $dark;
+                        color: $white;
+                        i{
+                            color: $white;
+                        }
+                    }
+                    i{
+                        color: $dark;
+                        padding-left: $font-40;
+                    }
             }
         }
     }
-    .gallery{
-        @include layout($wrap:wrap);
-        figure{
-            width: 270px;
-            padding-bottom: $basic * 3;
-            position: relative;
-            img{
-                padding-bottom: $basic * 3;
-            }
-            figcaption{
-                dl{
-                    font-size: $font-middle;
-                    @include center;
-                    dt{
-                        padding-bottom: $basic;
-                        font-weight: bold;
-                        color: $black;
-                    }
-                    dd:nth-child(2){
-                        padding-bottom: $basic * 2;
-                        ins{
-                            margin: 0 $basic;
-                            color: $red;
-                        }
-                        del{
-                            margin: 0 $basic;
-                            color: $color;
-                        }
-                    }
-                    dd:nth-child(3){
-                        @include layout;
-                        button{
-                            @include layout($start:center);
-                            background-color: $white;
-                            @include border($width:$color);
-                        
-                        &:first-child{
-                            width: 133px;
-                            height: 37px;
-                            color: #000;
-                            border-radius: 18px;
-                        }
-                        &:last-child{
-                            width: 37px;
-                            height: 37px;
-                            border-radius: 50%;
-                            }
-                        }
-                    }
-                    dd:nth-child(4){
-                        position: absolute;
-                        right: 0; bottom: 200px;
-                        b{
-                            display: block;
-                            width: 50px; height: 50px;
-                            background-color: $red;
-                            border-radius: 50%;
-                            color: $white;
-                            @include layout($start:center);
-                        }
-                    } 
+    p{
+        img{
+            width: 1118px;
+        }
+    }
+}
+
+/* article.box01 */
+article.box01{
+    background-color: $white;
+    div{
+        display: flex;
+        div.box1{
+            @include width($wd:875px);
+            padding-top: 110px;
+            display: flex;
+            dl{
+                dt{
+                    font-size: $font-14;
+                    @include padding;
+                    font-weight: bold;
+                }
+                dd{
+                    
                 }
             }
+        }
+        p{
+            img{
+                width: 850px;
+            }
+        }
+    }h1{
+        img{
+            width: 120px;
+            margin-left: $font-20;
+            margin-right: 145px;
+        }
+    }
+}
+/* article box02 */
+article.box02{
+    @include box;
+    div{
+        width:calc(200% - 75px);
+        @include flex;
+        dl{
+            width: 12.5%;
+            dt{
+                @include dt
+            }
+        }
+        figure{
+            width:12.5%;
+            position: relative;
+            img{
+                @include ab;
+            }
+            figcaption{
+                @include ab;
+                left: 0; bottom: 0;
+                @include center;
+            }
+        }
+    }
+}
+
+/* article box03 */
+article.box03{
+    background-color: $back;
+    div{
+        display: flex;
+        @include padding($bottom:100px);
+        dl{
+            @include width($wd:500px);
+            dd{
+                button{
+                    &:hover{
+                        i{
+                            color: $back;
+                        }
+                    }
+                    i{
+                        color: $dark;
+                        padding-left: 186px;
+                    }
+                }
+            }
+            dt{
+                @include dt
+            }
+        }
+    }
+}
+
+/* article box04 */
+article.box04{
+    @include box;
+    div{
+        width:calc(125% - 75px);
+        @include flex;
+        dl{
+            width: 20%;
+            dt{
+                @include dt
+            }
+        }
+        figure{
+            width:20%;
+            position: relative;
+            img{
+                @include ab;
+            }
+            figcaption{
+                @include ab;
+                left: 0; bottom: 0;
+                @include center;
+            }
+        }
+    }
+}
+
+/* article box05 */
+article.box05{
+    background-color: $back;
+    div{
+        display: flex;
+        @include padding($bottom:100px);
+        dl{
+            @include width($wd:500px);
+            dd{
+                font-size: $font-16;
+                @include lineheight($lh:25px);
+                button{
+                    i{
+                        color: $dark;
+                        padding-left: 100px;
+                    }
+                }
+            }
+            dt{
+                font-size: $font-30;
+                padding-bottom: 37px;
+            }
+        }
+    }
+}
+
+/* article box06 */
+article.box06{
+    @include box;
+    div{
+        width:calc(100% - 75px);
+        @include flex;
+        dl{
+            width: 25%;
+            dt{
+                @include dt
+            }
+        }
+        figure{
+            width:25%;
+            position: relative;
+            img{
+                @include ab;
+            }
+            figcaption{
+                @include ab;
+                left: 0; bottom: 0;
+                @include center;
+            }
+        }
+    }
+}
+
+/* article box 07 */
+
+article.box07{
+    background-color: $back;
+    div{
+        display: flex;
+        @include padding($bottom:100px);
+        dl{
+            @include width($wd:500px);
+            dd{
+                button{
+                    i{
+                        padding-left: 100px;
+                    }
+                }
+            }
+            dt{
+                @include dt;
+            }
+        }
+    }
+}
+article.box08{
+    background-color: $back;
+    div{
+        display: flex;
+        @include padding($bottom:100px);
+        dl{
+            @include width($wd:500px);
+            dd{
+                button{
+                    i{
+                        padding-left: 100px;
+                    }
+                }
+            }
+            dt{
+                @include dt;
+            }
+        }
+    }
+}
+/* article box09 */
+article.box09{
+    background-color: $back;
+    padding: 142px 0;
+    dl{
+        @include width($wd:900px);
+        @include center;
+        dt{
+            font-size: $font-30;
+            margin-bottom: $font-40;
+        }
+        dd{
+            font-size: $font-30;
         }
     }
 }

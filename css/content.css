@@ -20,6 +20,13 @@ div>dl>dd>button{
     padding: 20px;
     font-weight: bold;
 }
+div>dl>dd>button:hover{
+    background-color: #252525;
+    color: #F7F5E8;
+}
+div>dl>dd>button:hover>i{
+    color: #F7F5E8;
+}
 div>dl>dd>button>i{
     color: #252525;
     padding-left: 40px;
@@ -60,33 +67,39 @@ article.box01>div>div.box1>dl>dt{
 
 article.box02{
     background-color: #fffef2;
-    position: relative;
+    padding: 50px 0 180px 75px;
+    overflow: hidden;
 }
 article.box02>div{
-    width: 2600px;
-    padding: 50px 0 180px;
+   width:calc(200% - 75px);
     display: flex;
     flex-wrap: wrap;
 }
-article.box02>div>figure{
-    
-  margin-bottom:74px;
-  text-align:center;
-  font-size:14px;}
-
-article.box02>div>figure>img{
-  width:327px;
-  margin-bottom:26px;
-}
 article.box02>div>dl{
-    margin-left: 75px;
-    width: 400px;
+    width:12.5%;
 }
 article.box02>div>dl>dt{
     font-size: 14px;
     padding-bottom: 25px;
     font-weight: bold;
 }
+article.box02>div>figure{
+    width:12.5%;
+  position: relative; 
+}
+
+article.box02>div>figure>img{
+    position: absolute;
+    width:90%;
+}
+article.box02>div>figure>figcaption{
+    position: absolute;
+    left: 0; bottom: 0;
+    text-align: center;
+    width: 90%;
+}
+
+
 
 /* article box03 */
 article.box03{
@@ -105,6 +118,9 @@ article.box03>div>dl>dd>button>i{
     color: #252525;
     padding-left: 186px;
 }
+article.box03>div>dl>dd>button:hover>i{
+    color: #F7F5E8
+}
 article.box03>div>dl>dt{
     font-size: 14px;
     padding-bottom: 25px;
@@ -114,24 +130,38 @@ article.box03>div>dl>dt{
 /* article box04 */
 article.box04{
     background-color: #fffef2;
-}article.box04>div{
-    width: 2600px;
-    padding: 50px 0 180px;
+    padding: 50px 0 180px 75px;
+    overflow: hidden;
+}
+article.box04>div{
+   width:calc(125% - 75px);
     display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
 }
 article.box04>div>dl{
-    margin-left: 75px;
-    width: 400px;
-}
-article.box04>div>figure>img{
-    width: 327px;
+    width:20%;
 }
 article.box04>div>dl>dt{
     font-size: 14px;
     padding-bottom: 25px;
     font-weight: bold;
+}
+article.box04>div>figure{
+    width:20%;
+  position: relative; 
+  padding-bottom: 55px;
+}
+
+article.box04>div>figure>img{
+    position: absolute;
+    width:90%;
+}
+article.box04>div>figure>figcaption{
+    position: absolute; 
+    left: 0; bottom: 0;
+    text-align: center;
+    width: 90%;
+    
 }
 
 
@@ -151,6 +181,9 @@ article.box05>div>dl>dt{
     font-size: 30px;
     padding-bottom: 37px;
 }
+article.box05>div>dl>dd>button>i{
+    padding-left: 100px;
+}
 article.box05>div>dl>dd{
     font-size: 16px;
     line-height: 25px;
@@ -159,25 +192,39 @@ article.box05>div>dl>dd{
 /* article box 06 */
 article.box06{
     background-color: #fffef2;
+    padding: 50px 0 250px 75px;
+    overflow: hidden;
 }
 article.box06>div{
-    width: 2600px;
-    padding: 50px 0 180px;
+   width:calc(100% - 75px);
     display: flex;
     flex-wrap: wrap;
 }
 article.box06>div>dl{
-    margin-left: 75px;
-    width: 400px;
-}
-article.box06>div>figure>img{
-    width: 327px;
+    width:25%;
 }
 article.box06>div>dl>dt{
     font-size: 14px;
     padding-bottom: 25px;
     font-weight: bold;
 }
+article.box06>div>figure{
+    width:25%;
+  position: relative;
+  padding-bottom: 55px; 
+}
+
+article.box06>div>figure>img{
+    position: absolute;
+    width:90%;
+}
+article.box06>div>figure>figcaption{
+    position: absolute;
+    left: 0; bottom:0;
+    text-align: center;
+    width: 90%;
+}
+
 /* article box07 */
 article.box07{
     background-color: #fffef2;
@@ -195,7 +242,9 @@ article.box07>div>dl>dt{
     padding-bottom: 25px;
     font-weight: bold;
 }
-
+article.box07>div>dl>dd>button>i{
+    padding-left: 150px;
+}
 
 /* article box08 */
 article.box08{
@@ -215,6 +264,9 @@ article.box08>div>dl>dt{
 article.box08>div>dl>dd{
     font-size: 16px;
     line-height: 25px;
+}
+article.box08>div>dl>dd>button>i{
+    padding-left: 100px;
 }
 /* article box09 */
 article.box09{

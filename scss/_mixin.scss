@@ -1,23 +1,36 @@
 @use './variable' as *;
 
-@mixin width{
-    width: 1172px;
+@mixin width($wd:100%){
+    width: $wd;
     margin: 0 auto;
 }
-@mixin layout($start: space-between,$direction:row, $vertivcal:center,$wrap: nowrap){
+@mixin flex{
     display: flex;
-    justify-content: $start;
-    flex-direction: $direction;
-    align-items:$vertivcal;
-    flex-wrap: $wrap;
+    flex-wrap: wrap;
 }
-@mixin margin($bottom:0){
-    margin: 0 auto;
-    margin-bottom: $bottom;
+@mixin lineheight($lh:40px){
+    line-height: $lh;
 }
 @mixin center{
     text-align: center;
 }
-@mixin border($width:#e8e8e8){
-    border: 1px solid $width;
+@mixin padding($bottom:25px){
+    padding-bottom: $bottom;
+}
+@mixin box{
+    background-color: $back;
+    padding: 50px 0 180px 75px;
+    overflow: hidden;
+}
+@mixin border($px:1px, $width:#d0cfcf){
+    border: $px solid $width;
+}
+@mixin dt{
+    font-size: $font-14;
+    padding-bottom: 25px;
+    font-weight: bold;
+}
+@mixin ab{
+    position: absolute;
+    width:90%;
 }

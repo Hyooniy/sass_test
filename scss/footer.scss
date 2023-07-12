@@ -2,58 +2,107 @@
 @use './mixin' as *;
 
 #footer{
-    padding: 70px 0 50px;
-    background-color: $back;
+    background-color: $dark;
 }
-    aside{
-    width: $content;
-    @include margin($bottom:60px);
-    @include layout($wrap:wrap,$start:flex-start,$vertivcal:flex-start);
-    font-size: $small;
+aside{
+    @include width($wd:95%);
+    padding: 50px 0;
+    @include flex;
+    justify-content: space-between;
+    font-size: $font-14;
+    color: $back;
     dl{
-        width: 25%;
-        dt{ 
-            font-size: $font-middle;
+        width: 20%;
+        &:nth-child(5){
+            width: 700px;
+            padding-right: $font-20;
+            dt{
+                span{
+                    width: 700px;
+                }
+            }
+            dd{
+                border-bottom: 1px solid $back;;
+            }
+        }
+        &:last-child{
+            dd{
+                width: 300px;
+                @include lineheight($lh:25px);
+            }
+        }
+        &:first-child{
+            width: 700px;
+            padding-right: $font-20;
+            dd{
+                form{
+                    @include lineheight($lh:35px);
+                    ul{
+                        li{
+                            &:last-child{
+                                label{
+                                    display: block;
+                                    input{
+                                        margin-top: $font-16;
+                                        width: 658px;
+                                        @include lineheight($lh:35px);
+                                        @include border($width:$back);
+                                        background-color: $dark;
+                                    }
+                                    button{
+                                        width: $font-30 + 5; height: $font-40;
+                                        @include border($width:$back);
+                                        background-color: $dark;
+                                        padding-bottom: $basic;
+                                        border-left: none;
+                                        position: relative;
+                                        cursor: pointer;
+                                        i{
+                                            margin-left: 5px;
+                                            margin-bottom: 5px;
+                                            position: absolute;
+                                            color: $back;
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        dt{
+            font-size: $font-20;
             font-weight: bold;
-            margin-bottom: $large;
+            margin-bottom: 35px;
             color: $dark;
             span{
+                width: 700px;
                 font-weight: bold;
-                padding-bottom: $basic;
-                border-bottom: 1px solid $black;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #F7F5E8;
                 display: inline-block;
-                width: 100px;
+                width: 300px;
             }
         }
         dd{
-            margin-bottom: $font-middle;
-        a{
-            font-size: $small;
-            color: $color;
-        }
-        }        
-        &:nth-child(1)>dd>address{
-            font-size:normal;
-            font-weight: bold;
-            width: 247px;
-            font-size: $font-middle;
-            line-height: 25px;
-        }
-        
-    }
-    }
-
-    footer{
-        @include width;
-        @include layout($direction:row-reverse);
-        ul{
-            @include layout;
-            li{
-                margin-left: $basic;
+            margin-bottom: 15px;
+            a{
+                font-size: 12px;
+                color: #F7F5E8;
             }
         }
-        small{
-            font-size: $font-middle;
-            color: $color;
-        }
     }
+}
+
+footer{
+    padding: 25px 0;
+    position: relative;
+    border-top: 3px solid #F7F5E8;
+    small{
+        font-size: 16px;
+        color: #F7F5E8;
+        padding-left: 40px;
+    } 
+}

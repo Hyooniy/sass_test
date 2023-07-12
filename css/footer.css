@@ -23,7 +23,7 @@ aside>dl:first-child>dt>span{
     width: 700px
 }
 aside>dl:first-child>dd>form{
-    line-height: 40px;
+    line-height: 35px;
 }
 
 aside>dl:first-child>dd>form ul>li>p{
@@ -46,6 +46,7 @@ aside>dl:first-child>dd>form ul>li:last-child>label>button{
     padding-bottom: 9px;
     border-left: none;
     position: relative;
+    cursor: pointer;
 }
 aside>dl:first-child>dd>form ul>li:last-child>label>button>i{
     margin-left: 5px;
