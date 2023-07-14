@@ -74,6 +74,23 @@ article.box02>div{
    width:calc(200% - 75px);
     display: flex;
     flex-wrap: wrap;
+    position:relative;
+}
+article.box02>div .prev{
+    position:absolute;
+  left:30px;
+  top:50%;
+  width:6.6666vw;
+  height:6.6666vw;
+  display:flex;
+}
+article.box02>div .next{
+    position:absolute;
+  right:0;
+  top:50%;
+  width:100px;
+  height:100px;
+  display:flex;
 }
 article.box02>div>dl{
     width:12.5%;

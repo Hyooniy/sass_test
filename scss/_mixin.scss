@@ -18,8 +18,8 @@
     padding-bottom: $bottom;
 }
 @mixin box{
-    background-color: $back;
-    padding: 50px 0 180px 75px;
+    background-color: $white;
+    padding: 50px 0 100px 75px;
     overflow: hidden;
 }
 @mixin border($px:1px, $width:#d0cfcf){
